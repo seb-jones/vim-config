@@ -122,3 +122,5 @@ inoremap <F12> <C-o>:syntax sync fromstart<CR>
 
 " Soft Wrap
 set wrap linebreak nolist
+
+let g:lexima_enable_basic_rules = 0
