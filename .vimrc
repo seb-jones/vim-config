@@ -88,7 +88,7 @@ nmap <F8> :TagbarToggle<CR>
 
 " Automatically rerun ctags on buffer write
 if filereadable("directories_to_tag.seb")
-    au BufWritePost *.php silent! !ctags -R --PHP-kinds=cfit -L directories_to_tag.seb
+    au BufWritePost *.php silent! !ctags -R --languages=php --PHP-kinds=cfit -L directories_to_tag.seb
 endif
 
 " Window Keymaps
@@ -122,3 +122,8 @@ inoremap <F12> <C-o>:syntax sync fromstart<CR>
 
 " Soft Wrap
 set wrap linebreak nolist
+
+let g:lexima_enable_basic_rules = 0
+
+" Load external changes to file automatically
+set autoread
