@@ -78,7 +78,7 @@ autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
 let g:php_namespace_sort_after_insert = 1
 
 " Stop CtrlP from searching dependancies and temporary files
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|vendor)|(\~$)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|vendor)|(\~$)|(\.(swp|ico|git|svn|jpg|jpeg|png|bmp|gif))$'
 
 " \q to delete buffer without closing the split window
 :nnoremap <Leader>q :Bdelete<CR>
