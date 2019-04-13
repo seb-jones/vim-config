@@ -123,3 +123,6 @@ inoremap <F12> <C-o>:syntax sync fromstart<CR>
 
 " Soft Wrap
 set wrap linebreak nolist
+
+" Disable Beep
+set belloff=all
