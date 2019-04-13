@@ -1,1 +1,1 @@
-ctags -R -o tags.vendor --PHP-kinds=cfit vendor
+ctags -R -o tags.vendor --languages=php --PHP-kinds=cfit vendor
