@@ -126,3 +126,6 @@ set wrap linebreak nolist
 
 " Disable Beep
 set belloff=all
+
+" Don't Change CtrlP Working Path When Opening Files
+let g:ctrlp_working_path_mode = 0
