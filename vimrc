@@ -106,7 +106,7 @@ nnoremap <C-Right> :vertical resize +5<CR>
 nnoremap <C-s> :vsp<CR>
 nnoremap <C-_> :sp<CR>
 
-nnoremap <C-q> :q<CR>
+ "nnoremap <C-d> :q<CR>
 
 " Refresh CtrlP
 map <silent> <F6> :CtrlPClearCache<CR>
