@@ -108,7 +108,15 @@ nnoremap <C-Right> :vertical resize +5<CR>
 nnoremap <C-s> :vsp<CR>
 nnoremap <C-_> :sp<CR>
 
- "nnoremap <C-d> :q<CR>
+" Tab Keymaps
+nnoremap th  :tabfirst<CR>
+nnoremap tk  :tabnext<CR>
+nnoremap tj  :tabprev<CR>
+nnoremap tl  :tablast<CR>
+nnoremap tt  :tabnew<CR>
+nnoremap tx  :tabclose<CR>
+
+"nnoremap <C-d> :q<CR>
 
 " Refresh CtrlP
 map <silent> <F6> :CtrlPClearCache<CR>
