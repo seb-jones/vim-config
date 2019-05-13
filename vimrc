@@ -113,10 +113,10 @@ nnoremap [b :bp<CR>
 nnoremap ]b :bn<CR>
 
 " Tab Keymaps
-nnoremap th  :tabfirst<CR>
-nnoremap tk  :tabnext<CR>
-nnoremap tj  :tabprev<CR>
-nnoremap tl  :tablast<CR>
+nnoremap tj  :tabfirst<CR>
+nnoremap tl  :tabnext<CR>
+nnoremap th  :tabprev<CR>
+nnoremap tk  :tablast<CR>
 nnoremap tt  :tabnew<CR>
 nnoremap tx  :tabclose<CR>
 
