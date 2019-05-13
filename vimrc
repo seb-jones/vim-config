@@ -34,9 +34,6 @@ set expandtab
 
 set number
 
-set lines=39
-set columns=84
-
 set wildmode=longest,list,full
 set wildmenu
 
