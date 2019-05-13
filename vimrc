@@ -108,6 +108,10 @@ nnoremap <C-Right> :vertical resize +5<CR>
 nnoremap <C-s> :vsp<CR>
 nnoremap <C-_> :sp<CR>
 
+" Buffer Keymaps
+nnoremap [b :bp<CR>
+nnoremap ]b :bn<CR>
+
 " Tab Keymaps
 nnoremap th  :tabfirst<CR>
 nnoremap tk  :tabnext<CR>
@@ -115,6 +119,10 @@ nnoremap tj  :tabprev<CR>
 nnoremap tl  :tablast<CR>
 nnoremap tt  :tabnew<CR>
 nnoremap tx  :tabclose<CR>
+
+" Quicklist Keymaps
+nnoremap [c :cp<CR>
+nnoremap ]c :cn<CR>
 
 "nnoremap <C-d> :q<CR>
 
