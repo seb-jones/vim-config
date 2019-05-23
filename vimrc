@@ -146,7 +146,7 @@ set belloff=all
 let g:ctrlp_working_path_mode = 0
 
 " Only use lexima for newline operations
-let g:lexima_enable_basic_rules = 0
+" let g:lexima_enable_basic_rules = 0
 
 " Automatically reload files when they are changed by another program
 set autoread
