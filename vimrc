@@ -150,3 +150,4 @@ let g:ctrlp_working_path_mode = 0
 
 " Automatically reload files when they are changed by another program
 set autoread
+au FocusGained,BufEnter * :checktime
