@@ -8,3 +8,5 @@ Set `~/.vimrc`:
 ```
 source ~/.vim-config/vimrc
 ```
+## See Also
+[vim-plugins](https://github.com/seb-jones/vim-plugins/)
