@@ -129,3 +129,4 @@ au CursorHold * checktime
 
 set hlsearch
 set incsearch
+syntax on
