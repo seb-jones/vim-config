@@ -118,6 +118,8 @@ set belloff=all
 
 " Don't Change CtrlP Working Path When Opening Files
 let g:ctrlp_working_path_mode = 0
+let g:ctrlp_max_files = 50000
+let g:ctrlp_max_depth = 40
 
 " Only use lexima for newline operations
 " let g:lexima_enable_basic_rules = 0
