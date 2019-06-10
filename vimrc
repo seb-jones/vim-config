@@ -54,9 +54,6 @@ let g:php_namespace_sort_after_insert = 1
 " Stop CtrlP from searching dependancies and temporary files
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|vendor)|(\~$)|(\.(swp|ico|git|svn))$'
 
-" \q to delete buffer without closing the split window
-:nnoremap <Leader>q :Bdelete<CR>
-
 " F8 to open tagbar
 nmap <F8> :TagbarToggle<CR>
 
@@ -132,3 +129,7 @@ au CursorHold * checktime
 set hlsearch
 set incsearch
 syntax on
+
+" Run PHPStan static analysis when calling make
+set makeprg=./vendor/bin/phpstan\ analyse\ --error-format=raw\ --no-progress\ src
+set errorformat=%f:%l:%m
