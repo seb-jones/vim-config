@@ -133,3 +133,13 @@ syntax on
 " Run PHPStan static analysis when calling make
 set makeprg=./vendor/bin/phpstan\ analyse\ --error-format=raw\ --no-progress\ src
 set errorformat=%f:%l:%m
+
+" Persistent Undo
+    call system('mkdir /tmp/vim')
+if has('persistent_undo')
+    set undodir=/tmp/vim
+    set undofile
+endif
+
+" Put backups in /tmp
+set backupdir=/tmp/vim
