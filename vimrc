@@ -1,6 +1,6 @@
 set nocompatible
-source $VIMRUNTIME/mswin.vim
-behave mswin
+"source $VIMRUNTIME/mswin.vim
+"behave mswin
 
 set tabstop=4
 set shiftwidth=4
@@ -131,7 +131,7 @@ set incsearch
 syntax on
 
 " Run PHPStan static analysis when calling make
-set makeprg=./vendor/bin/phpstan\ analyse\ --error-format=raw\ --no-progress\ src
+set makeprg=php\ artisan\ code:analyse\ --no-tty\ --error-format=raw\ --no-progress
 set errorformat=%f:%l:%m
 
 " Persistent Undo
