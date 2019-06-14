@@ -143,3 +143,6 @@ endif
 
 " Put backups in /tmp
 set backupdir=/tmp/vim
+
+" Map double-space to clear highlighting
+map <silent> <Space>:noh<CR>
