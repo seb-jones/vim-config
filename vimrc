@@ -145,4 +145,9 @@ endif
 set backupdir=/tmp/vim
 
 " Map double-space to clear highlighting
-map <silent> <Space>:noh<CR>
+map <silent> <Space> :noh<CR>
+
+" Highlight current line when not in insert mode
+set cul
+autocmd InsertEnter * set nocul
+autocmd InsertLeave * set cul
