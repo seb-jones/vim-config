@@ -131,7 +131,7 @@ set incsearch
 syntax on
 
 " Run PHPStan static analysis when calling make
-set makeprg=php\ artisan\ code:analyse\ --no-tty\ --error-format=raw\ --no-progress
+let &makeprg="php artisan code:analyse --no-tty --error-format=raw --no-progress \\| grep -vE 'Call to an undefined method Illuminate.+View::with.+()'"
 set errorformat=%f:%l:%m
 
 " Persistent Undo
@@ -151,3 +151,5 @@ map <silent> <Space> :noh<CR>
 set cul
 autocmd InsertEnter * set nocul
 autocmd InsertLeave * set cul
+autocmd WinLeave * setlocal nocul
+autocmd WinEnter * setlocal cul
