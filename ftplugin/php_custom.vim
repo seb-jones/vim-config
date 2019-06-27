@@ -1,15 +1,16 @@
 " Set up PHP 'use' import plugin
-" function! IPhpInsertUse()
-"     call PhpInsertUse()
-"     call feedkeys('a',  'n')
-" endfunction
-" map <Leader>u <Esc>:call IPhpInsertUse()<CR>
+function! IPhpInsertUse()
+    call PhpInsertUse()
+    call feedkeys('a',  'n')
+endfunction
+inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
 noremap <Leader>u :call PhpInsertUse()<CR>
 
 " Sort php 'use' statements when inserting a new one
 let s:php_namespace_sort_after_insert = 1
 
 " Stop CtrlP from searching dependancies and temporary files
+let s:ctrlp_custom_ignore = '\v[\/](node_modules)|(\~$)|(\.(swp|ico|git|svn))$'
 " let s:ctrlp_custom_ignore = '\v[\/](node_modules|vendor)|(\~$)|(\.(swp|ico|git|svn))$'
 
 " Automatically rerun ctags on buffer write
@@ -22,4 +23,4 @@ setlocal grepprg=grep\ -nIR\ --exclude=*~\ --exclude=*.swp\ --exclude-dir=vendor
 
 " Run Larastan static analysis when calling make
 let &makeprg="php artisan code:analyse --no-tty --error-format=raw --no-progress \\| grep -vE 'Call to an undefined method Illuminate.+View::with.+()'"
-set errorformat=%f:%l:%m
+setlocal errorformat=%f:%l:%m
