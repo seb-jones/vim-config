@@ -125,3 +125,6 @@ autocmd InsertEnter * set nocul
 autocmd InsertLeave * set cul
 autocmd WinLeave * setlocal nocul
 autocmd WinEnter * setlocal cul
+
+" Stop CtrlP from searching dependancies and temporary files
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|vendor)|(\~$)|(\.(swp|ico|git|svn))$'

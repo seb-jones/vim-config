@@ -10,12 +10,11 @@ noremap <Leader>u :call PhpInsertUse()<CR>
 let s:php_namespace_sort_after_insert = 1
 
 " Stop CtrlP from searching dependancies and temporary files
-let s:ctrlp_custom_ignore = '\v[\/](node_modules)|(\~$)|(\.(swp|ico|git|svn))$'
-" let s:ctrlp_custom_ignore = '\v[\/](node_modules|vendor)|(\~$)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules)|(\~$)|(\.(swp|ico|git|svn))$'
 
 " Automatically rerun ctags on buffer write
-if filereadable("directories_to_tag.seb")
-    au BufWritePost *.php silent! !ctags -R --PHP-kinds=cfit --language-force=PHP -L directories_to_tag.seb
+if filereadable("directories_to_ctag")
+    au BufWritePost *.php silent! !ctags -R --PHP-kinds=cfit --language-force=PHP -L directories_to_ctag
 endif
 
 " Make grep work recursively and ignore dependency folders
