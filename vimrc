@@ -88,8 +88,8 @@ set belloff=all
 
 " Don't Change CtrlP Working Path When Opening Files
 let g:ctrlp_working_path_mode = 0
-let g:ctrlp_max_files = 50000
-let g:ctrlp_max_depth = 40
+let g:ctrlp_max_files = 100000
+let g:ctrlp_max_depth = 80
 
 " Only use lexima for newline operations
 " let g:lexima_enable_basic_rules = 0
@@ -128,3 +128,6 @@ autocmd WinEnter * setlocal cul
 
 " Stop CtrlP from searching dependancies and temporary files
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|vendor)|(\~$)|(\.(swp|ico|git|svn))$'
+
+" :bufonly closes all but the current buffer
+command Bufonly :%bd|e#
