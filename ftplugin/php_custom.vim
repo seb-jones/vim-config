@@ -17,9 +17,6 @@ if filereadable("directories_to_ctag")
     au BufWritePost *.php silent! !ctags -R --PHP-kinds=cfit --language-force=PHP -L directories_to_ctag
 endif
 
-" Make grep work recursively and ignore dependency folders
-setlocal grepprg=grep\ -nIR\ --exclude=*~\ --exclude=*.swp\ --exclude-dir=vendor\ --exclude-dir=node_modules\ --exclude=tags\ --exclude=tags.vendor
-
 " Run Larastan static analysis when calling make
 let &makeprg="php artisan code:analyse --no-tty --error-format=raw --no-progress \\| grep -vE 'Call to an undefined method Illuminate.+View::with.+()'"
 setlocal errorformat=%f:%l:%m

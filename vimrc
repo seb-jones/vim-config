@@ -103,8 +103,8 @@ set hlsearch
 set incsearch
 syntax on
 
-" Make grep work recursively
-set grepprg=grep\ -nIR\ --exclude=*~\ --exclude=*.swp
+" Make grep work recursively and avoid common dependency folders
+set grepprg=grep\ -nIR\ --exclude='*~'\ --exclude='*.swp'\ --exclude-dir='vendor'\ --exclude-dir='node_modules'\ --exclude='tags'\ --exclude='tags.vendor'
 
 " Persistent Undo
     call system('mkdir /tmp/vim')
