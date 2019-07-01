@@ -76,6 +76,10 @@ map <silent> <F6> :CtrlPClearCache<CR>
 " CtrlP Fuzzy Search Tags
 map <M-p> :CtrlPTag<CR>
 
+" Refresh Syntax Highlighting when F12 is pressed
+noremap <F12> <Esc>:syntax sync fromstart<CR>
+inoremap <F12> <C-o>:syntax sync fromstart<CR>
+
 " Soft Wrap
 set wrap linebreak nolist
 
